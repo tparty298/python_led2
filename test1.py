@@ -18,7 +18,7 @@ FPS = 30
 LOOP_NUM=10000
 
 if __name__ == '__main__':
-   strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVEy)
+   strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL)
    # Intialize the library (must be called once before other functions).
    strip.begin()
    in_f=file('output.txt','r')
@@ -41,6 +41,6 @@ if __name__ == '__main__':
 
    for i in range(n):
       for j in range(LED_COUNT):
-         strip.setPixelColor(j,Color(int(col_ary[i][j][0]),int(col_ary[i][j][1]$
+         strip.setPixelColor(j,Color(int(col_ary[i][j][0]),int(col_ary[i][j][1]),int(col_ary[i][j][2])))#GRB
       strip.show()
       time.sleep(1/FPS)
