@@ -1,10 +1,10 @@
 # python_led2
 
-git clone [今回実行したいpythonファイルのあるプロジェクトのgit]
-cd [目的のディレクトリ]
-sudo python3 [目的のファイル].py
+- git clone [今回実行したいpythonファイルのあるプロジェクトのgit]
+- cd [目的のディレクトリ]
+- sudo python3 [目的のファイル].py
 
-これだけだと
+これだけだとダメで、
 pi@raspberrypi:~/python_led2 $ sudo python3 test.py
 Traceback (most recent call last):
   File "test.py", line 2, in <module>
