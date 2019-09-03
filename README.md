@@ -57,6 +57,5 @@ OverflowError: in method 'ws2811_led_set', argument 3 of type 'uint32_t'
 ```
 が出た時、LEDの数(289)とデータのフォーマットの形(1~289行目まで+-1)の形が合っていない
 LEDの数が多いか少ないはず
-読み込むデータの1フレーム目を確認、この
-    return ws.ws2811_led_set(self.channel, pos, value)g
-    return ws.ws2811_led_set(self.channel, pos, value)
+読み込むデータの1フレーム目を確認、前回だと288個しかLEDがないのに、289個として宣言されていた。
+
