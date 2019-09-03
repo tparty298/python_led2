@@ -4,15 +4,19 @@
 - cd [目的のディレクトリ]
 - sudo python3 [目的のファイル].py
 
-これだけだとダメで、
+
+-これだけだとダメで、
+```
 pi@raspberrypi:~/python_led2 $ sudo python3 test.py
 Traceback (most recent call last):
   File "test.py", line 2, in <module>
     from neopixel import *
 ModuleNotFoundError: No module named 'neopixel'
 pi@raspberrypi:~/python_led2 $ 
-でダメ
+```
+で、neopixelに関するライブラリがないと怒られる。
 
+そこで、
 <https://blog.boochow.com/article/456229607.html>を参考に
 ###SPI通信を有効化
 sudo raspi-config
