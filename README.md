@@ -39,7 +39,5 @@ pi@raspberrypi:~/python_led2 $
 - cd [目的のディレクトリへ]
 - sudo python3 [目的のファイル].pyで実行可能
 
-
-###CSVで読み込む用にpandasをインストールする
-sudo pip3 install pandas
+###あれnumpyってpipする必要あったっけ...まぁいいや
 
