@@ -32,7 +32,7 @@ def Light():
    loop_start_time=time.time()
    start_index=loopCount*(LED_COUNT+1)
    for j in range(LED_COUNT):
-      strip.setPixelColor(j,Color(int(data[start_index+j,0]),int(data[start_index+j,1]),int(data[start_index+j,2])))
+      strip.setPixelColor(j,Color(int(data[start_index+j,1]),int(data[start_index+j,0]),int(data[start_index+j,2])))
       #print(data[j,0])
    strip.show()
    loopCount=loopCount+1
