@@ -22,12 +22,12 @@ pi@raspberrypi:~/python_led2 $
 - そこで、 <https://blog.boochow.com/article/456229607.html>を参考に
 
 
-###SPI通信を有効化
+### SPI通信を有効化
 - sudo raspi-config
 - 5 Interfacing Options -> SPI enabled
 
  
-###rpi_ws281xというライブラリをインストールする。
+### rpi_ws281xというライブラリをインストールする。
 - git clone https://github.com/jgarff/rpi_ws281x 
 - cd rpi_ws281x
 - sudo apt-get install scons
@@ -39,8 +39,8 @@ pi@raspberrypi:~/python_led2 $
 - cd [目的のディレクトリへ]
 - sudo python3 [目的のファイル].pyで実行可能
 
-##目的のコードでエラーが出る時
-###uint32_tがなんちゃら
+## 目的のコードでエラーが出る時
+### uint32_tがなんちゃら
 LED_COUNT=289で
 ```
 led loop: j=286
@@ -59,3 +59,7 @@ OverflowError: in method 'ws2811_led_set', argument 3 of type 'uint32_t'
 LEDの数が多いか少ないはず
 読み込むデータの1フレーム目を確認、前回だと288個しかLEDがないのに、289個として宣言されていた。
 
+
+## OSC serverでのipについて
+ip="0.0.0.0"でも動かなくはないが、挙動が不明なので使うべきではない
+ip="255.255.255.255"が良いらしい(未検証)
