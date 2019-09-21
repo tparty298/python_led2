@@ -63,3 +63,5 @@ LEDの数が多いか少ないはず
 ## OSC serverでのipについて
 ip="0.0.0.0"で動く。255.255.255.255はbroadcastだけど動かない
 
+sudo pip3 install osc4py3
+
